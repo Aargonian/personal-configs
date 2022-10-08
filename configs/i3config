@@ -75,11 +75,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# workspace back and forth (with/without active container)
-#workspace_auto_back_and_forth yes
-#bindsym $mod+b workspace back_and_forth
-#bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
-
 # split orientation
 bindsym $mod+b split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
@@ -154,22 +149,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
-
-# Move to workspace with focused container
-#bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
-#bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
-#bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
-#bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
-#bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
-#bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
-#bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
-#bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -387,21 +366,18 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Custom Time!
 # Autostart Applications
-
-exec --no-startup-id pulseaudio
+exec --no-startup-id pulseaudio --start
 exec --no-startup-id pa-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec --no-startup-id setxkbmap -option caps:super
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
 exec --no-startup-id $HOME/.screenlayout/layout.sh; sleep 1; nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id start_conky_maia
+exec_always --no-startup-id setxkbmap -option caps:super
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
