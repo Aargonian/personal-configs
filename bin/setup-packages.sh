@@ -41,4 +41,4 @@ for package in ${packages[@]}; do
     package_list="$package_list $package"
 done
 
-sudo pacman -Syu $package_list
+sudo pacman --needed --noconfirm -Syu $package_list

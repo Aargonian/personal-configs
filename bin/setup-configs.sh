@@ -19,17 +19,17 @@ chmod +x ./install_zsh.sh
 RUNZSH='no' ./install_zsh.sh
 rm ./install_zsh.sh
 
-# # Install the NERDFonts patched fonts for use in powerline packages
-# cd $HOME
-# mkdir -p ./src/git
-# cd ./src/git
-# git clone https://github.com/ryanoasis/nerd-fonts --depth=1
-# cd ./nerd-fonts
-# ./install.sh
-# cd $CWD
-#
-# # Install Vundle for use with Vim
-# git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+# Install the NERDFonts patched fonts for use in powerline packages
+cd $HOME
+mkdir -p ./src/git
+cd ./src/git
+git clone https://github.com/ryanoasis/nerd-fonts --depth=1
+cd ./nerd-fonts
+./install.sh
+cd $CWD
+
+# Install Vundle for use with Vim
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 # Symlink necessary config files
 link_config_file i3config $HOME/.config/i3/config
