@@ -367,7 +367,8 @@ mode "$mode_gaps_outer" {
 }
 
 # Autostart Applications
-exec --no-startup-id pulseaudio --start
+# Delay start PulseAudio because fuck
+exec --no-startup-id sleep 10; pulseaudio --start 
 exec --no-startup-id pa-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet

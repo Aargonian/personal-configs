@@ -1,0 +1,196 @@
+[global_config]
+  borderless = True
+  suppress_multiple_term_dialog = True
+[keybindings]
+  zoom_in = ""
+  zoom_out = ""
+  zoom_normal = ""
+  new_tab = ""
+  cycle_next = ""
+  cycle_prev = ""
+  go_next = ""
+  go_prev = ""
+  go_up = ""
+  go_down = ""
+  go_left = ""
+  go_right = ""
+  rotate_cw = ""
+  rotate_ccw = ""
+  split_horiz = ""
+  split_vert = ""
+  close_term = ""
+  copy = ""
+  paste = ""
+  toggle_scrollbar = ""
+  search = ""
+  close_window = ""
+  resize_up = ""
+  resize_down = ""
+  resize_left = ""
+  resize_right = ""
+  move_tab_right = ""
+  move_tab_left = ""
+  toggle_zoom = ""
+  scaled_zoom = ""
+  next_tab = ""
+  prev_tab = ""
+  full_screen = ""
+  reset = ""
+  reset_clear = ""
+  hide_window = ""
+  group_all = ""
+  ungroup_all = ""
+  group_tab = ""
+  ungroup_tab = ""
+  new_window = ""
+  new_terminator = ""
+  insert_number = ""
+  insert_padded = ""
+  edit_window_title = ""
+  edit_tab_title = ""
+  edit_terminal_title = ""
+  layout_launcher = ""
+  help = ""
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    scrollbar_position = hidden
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 12:12
+      maximised = False
+      fullscreen = False
+      size = 1901, 2109
+      title = aargonian@NyteworkDesktop:~/.config/ncspot
+      last_active_term = 688d4051-e6d1-4c39-8804-1444e295d95d
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 688d4051-e6d1-4c39-8804-1444e295d95d
+  [[Development]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 12:12
+      maximised = False
+      fullscreen = False
+      size = 1901, 2109
+      title = aargonian@NyteworkDesktop:~/.config/ncspot
+      last_active_term = 7fe479d8-bcbb-4694-a80b-f7265d6b0b3b
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 1834
+      ratio = 0.8716730038022814
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 1579
+      ratio = 0.8328059071729957
+    [[[child3]]]
+      type = HPaned
+      parent = child2
+      order = 0
+      position = 317
+      ratio = 0.2013977128335451
+    [[[child4]]]
+      type = VPaned
+      parent = child3
+      order = 0
+      position = 915
+      ratio = 0.5002733734281027
+    [[[terminal5]]]
+      type = Terminal
+      parent = child4
+      order = 0
+      profile = default
+      uuid = ee136a44-242c-4936-a234-089584074c7a
+    [[[terminal6]]]
+      type = Terminal
+      parent = child4
+      order = 1
+      profile = default
+      uuid = 688d4051-e6d1-4c39-8804-1444e295d95d
+    [[[child7]]]
+      type = HPaned
+      parent = child3
+      order = 1
+      position = 617
+      ratio = 0.4928115015974441
+    [[[child8]]]
+      type = VPaned
+      parent = child7
+      order = 0
+      position = 915
+      ratio = 0.5002733734281027
+    [[[terminal9]]]
+      type = Terminal
+      parent = child8
+      order = 0
+      profile = default
+      uuid = 8f51f315-3a14-434c-8b79-72a97b057937
+    [[[terminal10]]]
+      type = Terminal
+      parent = child8
+      order = 1
+      profile = default
+      uuid = c048d3d9-949d-43df-8147-ba58d5a4afbb
+    [[[child11]]]
+      type = VPaned
+      parent = child7
+      order = 1
+      position = 915
+      ratio = 0.5002733734281027
+    [[[terminal12]]]
+      type = Terminal
+      parent = child11
+      order = 0
+      profile = default
+      uuid = f97ecc4a-367b-4f93-ab06-64e624ed2895
+    [[[terminal13]]]
+      type = Terminal
+      parent = child11
+      order = 1
+      profile = default
+      uuid = 7fe479d8-bcbb-4694-a80b-f7265d6b0b3b
+    [[[terminal14]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = 8e0aa564-177e-44a0-bf51-a83608c8b24b
+      command = nmon
+    [[[child15]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 948
+      ratio = 0.5
+    [[[terminal16]]]
+      type = Terminal
+      parent = child15
+      order = 0
+      profile = default
+      uuid = f56f5656-ca26-4e5d-a2e6-0fd19ff08078
+      command = htop
+    [[[terminal17]]]
+      type = Terminal
+      parent = child15
+      order = 1
+      profile = default
+      uuid = e0163585-acca-4094-8c75-acfa0f4febc8
+      command = ncspot
+[plugins]

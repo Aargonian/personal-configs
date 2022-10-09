@@ -1,0 +1,4 @@
+[keybindings]
+"Ctrl+q" = "quit"
+"q" = "focus queue"
+"l" = "focus library"
