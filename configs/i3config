@@ -2,7 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+set $mod Control
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -30,10 +30,11 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+c kill
+bindsym $mod+Shift+c kill
 
+## We are now using the Albert launcher by default, which should run on startup
 # start program launcher
-bindsym $mod+p exec --no-startup-id dmenu_run
+# bindsym $mod+p exec --no-startup-id dmenu_run
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -182,8 +183,9 @@ for_window [class="Xfburn"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
+## Binding is being used for the "Close" command
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -378,6 +380,7 @@ exec --no-startup-id $HOME/.screenlayout/layout.sh; sleep 1; nitrogen --restore;
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id start_conky_maia
+exec --no-startup-id albert
 exec_always --no-startup-id setxkbmap -option caps:super
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor

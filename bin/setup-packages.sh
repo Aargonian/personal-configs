@@ -16,14 +16,14 @@ packages=(
     "screen"
     "nmon"
     "htop"
-    "gvim"
+    "vim"
     "terminator"
     "wget"
     "curl"
     "rsync"
 
     # "Desktop Environment" lol
-    "i3"                # i3 Window Manager
+    "i3-gaps"           # i3 Window Manager
     "lightdm"           # Login Manager
     "picom"             # Compositor for Transparency in i3
     "dmenu"             # Gotta open programs somehow
@@ -54,3 +54,9 @@ for package in ${packages[@]}; do
 done
 
 sudo pacman --needed --noconfirm -Syu $package_list
+
+# Install Albert
+cd $HOME/src/AUR
+git clone https://aur.archlinux.org/albert
+cd albert
+sudo makepkg -sci
